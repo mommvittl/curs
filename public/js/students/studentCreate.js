@@ -1,7 +1,7 @@
 //alert('create')
 var addStudentsForm = document.forms.addStudentsForm;
 addStudentsForm.setAttribute("autocomplete","off");
-addStudentsForm.onsubmit = submitValidate.bind(addStudentsForm,"/studentsAjax/studentsAdd", "add",viewResultAddElement);
+addStudentsForm.onsubmit = submitValidate.bind(addStudentsForm,"/studentsAjax/elementAdd", "add",viewResultAddElement);
 for (var i =0; i < addStudentsForm.elements.length; i++ ){
 	addStudentsForm.elements[i].setAttribute('errorValueFlaf',0);
 	if((addStudentsForm.elements[i].type != 'reset') && (addStudentsForm.elements[i].type != 'submit')){

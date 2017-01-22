@@ -34,8 +34,7 @@ class manager_studentsAjaxController extends basisAjaxController{
                   $page = $arrPageData['page'];
             }else{ $page = 1; }
             $this->studentsArray = $this->studentsRepository->getAllElement(COLSTRINGINLIST ,(int)( COLSTRINGINLIST * ($page-1) ));
-        }
-		
+        }		
         $this->strResponse .= "<page>".$page."</page>";
         if($this->studentsArray && is_array($this->studentsArray)){
             foreach($this->studentsArray as $value){
@@ -73,7 +72,7 @@ class manager_studentsAjaxController extends basisAjaxController{
         $this->returnXmlResponse($this->strResponse);
     }
     
-    public function studentsAddAction() {
+    public function elementAddAction() {
       //  var_dump($_POST);
         $paramAddUpd = ( isset($_POST['paramAddUpd']) ) ? $_POST['paramAddUpd'] : 'add' ;
         $idElem = (isset($_POST['idElement']) ) ? (int)$_POST['idElement'] : 0 ;
@@ -97,7 +96,7 @@ class manager_studentsAjaxController extends basisAjaxController{
                    $this->returnXmlResponse(  "<flagResult>2</flagResult><resultAddTeacher>Некорректные данные</resultAddTeacher>" );
                 } 
                 $this->students->id = $idElem;
-                $this->teacherRepository->updateElement($this->students);
+                $this->studentsRepository->updateElement($this->students);
                 $this->strResponse .= "<flagResult idElement='" . $idElem . "'>0</flagResult><resultAddTeacher>Ок.Данные обновлены</resultAddTeacher>"; 					
                   $this->returnXmlResponse( $this->strResponse ); 					
             }else{
@@ -112,6 +111,17 @@ class manager_studentsAjaxController extends basisAjaxController{
                 $this->returnXmlResponse( $this->strResponse );
             }	
         }
+    }
+    
+    public function elementDeleteAction() {
+        $this->strResponse = "";
+        $idElem = ( isset( $_POST['idElement'] ) ) ? (int)$_POST['idElement'] : 0 ;
+       $this->students = $this->studentsRepository->getElementById($idElem); 
+        if( is_object( $this->students ) ){
+           $this->students->work = 0;
+             $this->studentsRepository->updateElement( $this->students );
+        }
+        $this->returnXmlResponse($this->strResponse);
     }
         
 }
