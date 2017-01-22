@@ -1,0 +1,23 @@
+{% extends "base.tmpl" %}
+	{% block main %}
+		<div class="createElementDiv">
+			<form method="post" name="userRegForm"  action="http://curs/user/register" class="createElementForm">
+				<p>Заполните форму регистрации</p>
+				<table class="createElementTable">
+				<tr><td><input type="text" name="username" value="{{username}}"></input></td><td>username</td></tr>
+				<tr><td><input type="text" name="login" value="{{login}}"></input></td><td>login</td></tr>
+				<tr><td><input type="password" name="password"></input></td><td>password</td></tr>
+				<tr><td><input type="password" name="password2"></input></td><td>повторите пароль</td></tr>
+				<tr><td><input type="reset"></input></td><td><input type="submit" name="userRegFormGo"></input></td></tr>
+				</table>
+			</form>
+			<p>Или вы можете <a href="http://curs/user/login">залогиниться</a></p>
+		</div>
+		{% if errFlag %}
+			<div class="informWindow" id="informWindow" onclick="this.hidden = true">
+			<p>{{errString}}</p>
+		</div>	
+		{% endif %}
+		
+	{% endblock %}	
+	

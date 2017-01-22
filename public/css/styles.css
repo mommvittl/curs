@@ -1,0 +1,129 @@
+/* сброс стилей браузера */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong,  tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2; 
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+p { word-wrap: break-word;}
+* {  box-sizing: border-box;}
+/* конец кода сброса стилей браузера */
+html { height: 100%; }
+body { background:#FDF5E6; position: relative; height: 100%;}
+h1 { font: 1.5em/1.2em Arial; text-align: center; }
+/* пользовательские стили */
+.clearfix:after { content: " "; display: table; width: 100%; clear: both;}
+.clearBoth { clear: both; }
+.outdiv { width: 100%; max-width: 1200px; margin: 0 auto;  height: 100%;position: relative; }
+.mainheader { background: url(/public/images/n.jpg) center center/cover #2E3B0B;  padding: 5px 10px; }
+.mainheader > h1 {text-align: left; padding-left: 5%; font: 2.5rem/2.6rem impact; color: RGBA(153,204,255,0.5);
+	text-shadow: 1px 1px 2px #000066, -1px -1px 2px  #000066, -1px 1px 2px  #000066, 1px -1px 2px  #000066 ; }
+.mainheader > p {text-align: left; padding-left: 1%; font: 1rem/1.2rem impact; color: #3399FF; text-shadow: 0 0 2px #000033; }
+.mainheader a { color: #003399; font-family: impact; }
+.headerInfoBlock { border: 2px solid #3399FF; border-radius: 5px; padding: 4px 10px; float: right; min-width: 20%;font-family: impact; }
+.headerInfoBlock p { color: #3399FF; }
+.headerInfoBlock > p span { color: #003399; font-family: impact;}
+.stringError { color: red; font: 1.5rem/1.8rem arial; }
+/*-------------------------------------------------------------------------------------*/
+.globalSearch {  position: relative;  }
+.globalSearch input[type="text"] { height: 30px; max-width: 80%; width: 500px; border: none; outline: none; border-radius: 12px 0 0 12px; color: black; padding: 0 10px; margin-right: -5px;}
+.globalSearch input[type="submit"] {height: 30px; width: 60px; border: none; outline: none; border-radius: 0 12px 12px 0; color: white; background: gray;  margin: 0; }
+.promptingWindow { width: 100%; max-width:300px; background: #EEF0D0 ; position: absolute; z-index: 10; border: 1px solid black; padding: 10px;
+	max-height: 200px; overflow: auto; }
+.promptingWindow > p { margin-bottom: 5px; cursor: pointer; color: #5B2C32; }
+/*-------------------------------------------------------------------------------------*/
+.modalWindow { background: #FAEBD7; box-shadow: 3px 3px black; position:absolute;z-index: 10;top:50%;left: 50%; padding: 5px 10px; border: 4px double #8B4513; padding: 5px;}
+.modalBodyWindow { width:960px; max-width: 100%;height: 700px;max-height: 100%; padding:10px; background:#FAEBD7; color:#800000; text-align:center;
+	font: 1em/2em arial; border: 4px solid #A52A2A;position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);}
+/*==================================================*/
+.stringPagePointer { margin-bottom: 4px; margin-top: 4px; }
+.stringPagePointer span { margin-left: 5px; margin-right: 5px; font: 1.5rem/1.8rem arial; padding: 1px 7px; border-radius: 5px; color: #696969; } 
+.stringPagePointer .activePagePointer { cursor: pointer; border: 1px solid black; background: #BF8029; }
+.stringPagePointer .passivePagePointer { cursor: pointer; border: 1px solid black; background: #D3D3D3; }
+.stringPagePointer .noPagePinter { background: transparent; }
+/*==================================================*/	
+/* Регистрация пользователя*/
+.createElementDiv { padding: 5px 10px;  background: #D2B48C; color: #A52A2A;}
+.createElementTable { margin: 0 auto; width: 100%; position: relative; }
+.createElementTable th { padding: 1px 5px; color:  #FFFACD; }
+.createElementTable  td { padding: 1px 5px;  }
+.createElementTable tr > td:first-child { text-align:right; padding-right: 10px;  }
+.createElementForm {border:  1px solid #2C4116; border-radius: 5px; padding: 10px; font: 1.2rem/1.5rem arial; text-align: center; }
+.createElementForm input[type="text"], .createElementForm input[type="password"] { padding: 2px 8px; border: none; 
+		outline: none; background: #FAF0E6; color: #8B4513; font-size: 1.2rem; width: 100%;}
+.createElementForm input[type="submit"],.createElementForm input[type="reset"] { cursor: pointer;  border: none; outline: none; padding: 2px 7px; }		
+.createElementForm input[type="submit"] { background: #F79F81; color: #800000; float: right; margin-right: 10%; }
+/*--------------------------------------------------------------------------*/
+.createInput { position: relative; }
+.createElementForm .errBefore { position: absolute; top: -33px; left: 10px; background: #FDF5E6; color: red; border-radius: 5px; box-shadow: 0 0 15px black;
+	padding: 5px;}
+/*===============================*/
+.mainnav { display: table-row; width: 100%; text-align: justify; background: #DEB887; cursor: pointer;}
+.mainnav span {width: auto; display: table-cell; text-align: center; padding: 3px; border-left: 1px solid black;}
+.mainnav span:first-of-type { border-left: none;}
+.mainnav span a {width: 1000px; display: table-cell; text-decoration: none; font: 1em arial; color: #A52A2A; }
+.mainnav span > span {width: 1000px; display: table-cell; text-decoration: none; font: 1em arial; color: #A52A2A; vertical-align: middle;}
+/*===============================*/
+.strMenuElements { display: table-row; width: 100%; text-align: justify; background: #A9A9A9; cursor: pointer;margin-bottom: 2px;}
+.strMenuElements span {width: auto; display: table-cell; text-align: center; padding: 3px; border-left: 1px solid black;}
+.strMenuElements span:first-of-type { border-left: none;}
+.strMenuElements span > span {width: 1000px; display: table-cell; text-decoration: none; font: 1em arial; color: #A52A2A; }
+/*=============================================================================*/
+.mainmain { width: 100%; position: relative;  }
+.mainmain > h2 { font: 1.2rem/1.4rem arial; text-align: center; color: #556B2F; }
+.accessaside { background: #BDB76B; width: calc( 40% - 5px ); float: right; border:  1px solid #2C4116; border-radius: 5px;padding: 5px;}
+.accesssection { background: #BDB76B; width: calc( 60% - 5px ); float: left;  border:  1px solid #2C4116; border-radius: 5px;padding: 5px;}
+.pathString { background: #2E3B0B; color: #ECF6CE; font: 1.4rem/1.6rem arial; }
+/*================*/
+.resultTable { width: 100%; background: #8B4513; position: relative; }
+.resultTable th { padding: 1px 5px; color:  #FFFACD;  }
+.resultTable td { padding: 1px 5px; background: #FFFACD; color: #556B2F; cursor: pointer; }
+.resultTable .upd {  background: url(/public/images/upd.png) center center/contain no-repeat #FFFACD;  }
+.resultTable .del {  background: url(/public/images/del2.png) center center/contain no-repeat #FFFACD; }
+/*==================================================================================================================*/
+.personalTable { width: 100%; background: #A1673E; position: relative; }
+.personalTable td { padding: 1px 5px; width: 50%; cursor: pointer; }
+.personalTable tr > td:first-child { text-align: right; padding-right: 10px; background: #A1673E; color: #FFFACD;  } 
+.personalTable tr > td:last-child { padding-left: 10px;  background: #FFFACD; color: #556B2F; }
+/*====================================================================================================================*/
+.selectVariantBut { margin-left: 10px; margin-right: 10px; background: #F5F5DC; color:#006400; cursor: pointer; outline: none; }
+.selectVariantBut:last-child { float: right; }
+/*===================================================================================================================*/
+.groupaside {  width: calc( 40% - 5px ); float: right; padding: 5px;  height: 100%; position: relative;}
+.groupsection { width: calc( 60% - 5px ); float: left;  padding: 5px;  height: 100%; position: relative;}
+.sectionMenuTitle  {text-align: center; font: 1.2rem/1rem arial; color: #A52A2A; background: #FFFACD;}
+/*====================================================================================================================*/
+.updateTable { width: 100%; padding: 5px 10px; position: relative; }
+.updateTable td {  padding: 1px 5px; min-width: 25vw; }
+.updateTable tr > td:first-child {  text-align:right; margin-right: 10px; }
+/*===============================================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+

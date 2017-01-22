@@ -1,0 +1,11 @@
+{% extends "base.tmpl" %}
+	{% block globalsearch %}
+		<form class="globalSearch" name="globalSearch" >
+			<p><input type="text" name="searchData" placeholder="фамилия студента" id="ss"></input>
+			<input type="submit" name="searchGo" value="search"></input></p>
+			<div id="promptingWindow" class="promptingWindow"></div>
+		</form>	
+	{% endblock %}
+	{% block globalsearchjavascript %}
+			<script src="public/js/globalSearch.js"></script>	
+	{% endblock %}	
