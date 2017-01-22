@@ -4,7 +4,6 @@ class manager_studentsController extends BasisController {
 
     public function indexAction($idElementData = 0) {
         $idElement = (int) $idElementData;
-//		$userList = new accessRepository;
         $this->arrParameterForPage['pathAccess'] = 'students/index';
         $this->arrParameterForPage['idElementData'] = $idElement;
         $this->page = new indexPage("students/manager_studentsIndex.tmpl");

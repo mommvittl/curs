@@ -1,0 +1,14 @@
+{% extends "cpecyalitys/manager_cpecyalitysBasis.tmpl" %}
+    {% block main %}
+        <aside class="groupaside clearfix">
+            <div id="asideAjaxGroupsContent" class="asideAjaxContent"></div>
+        </aside>
+        <section class="groupsection clearfix">
+            <div id="personalData" class="asideAjaxContent"></div>
+        </section>
+    {% endblock %}
+    {% block javascript %}
+        <script> var idElementForPersonalPage = {{idElementData}}</script>
+        <script src="public/js/elementCreateValidate.js"></script>		
+        <script src="public/js/scpecialitys/cpecialitysIndex.js"></script>
+    {% endblock %}	

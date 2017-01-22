@@ -1,52 +1,59 @@
 <html>
   <head>
-	<meta charset="utf-8">
-	<title>stock</title>
-	<link href="/public/css/styles.css" rel="stylesheet" />
-	<script src="public/js/myAjaxLib.js"></script>
-	<script src="public/js/viewLib.js"></script>
+    <meta charset="utf-8">
+    <title>Curs</title>
+    <link href="/public/css/styles.css" rel="stylesheet" />
+    <script src="public/js/myAjaxLib.js"></script>
+    <script src="public/js/viewLib.js"></script>
   </head>
   <body>
-	<div class="outdiv">
-		<header class="mainheader clearfix">
-			{% block header %}
-			<h1>Курсы повышения квалификации Courses.</h1>			
-			<div class="headerInfoBlock">			
-			<p>Вы вошли в систему как <span>{{sessionUserName}}</span> .</p>
-			<p>Для выхода кликните <a href="/user/logout">Exit</a></p>
-			</div>
-			<p>Tel: 222-333-444</p>
-			<p>Email: courses@ukr.net</p>
-				{% block globalsearch %}
-				{% endblock %}
-			{% endblock %}								
-		</header>
-		<nav class="mainnav">
-			{% block nav %}
-			{% endblock %}	
-		</nav>
-		<main class="mainmain clearfix">
-			{% block sectionMenu %}
-			{% endblock %}
-			{% block main %}
-			<aside class="mainaside clearfix">
-				{% block sidebar %}				
-				{% endblock %}
-			</aside>
-			<section class="mainsection clearfix">
-				{% block section %}
-				{% endblock %}
-			</section>					
-			{% endblock %}
-		</main>
-		<footer>
-			{% block footer %}
-			{% endblock %}
-		</footer>
+    <div class="outdiv">
+        <header class="mainheader clearfix">
+            {% block header %}
+	<h1>Курсы повышения квалификации Courses.</h1>			
+	<div class="headerInfoBlock">			
+                    <p>Вы вошли в систему как <span>{{sessionUserName}}</span> .</p>
+                    <p>Для выхода кликните <a href="/user/logout">Exit</a></p>
 	</div>
-		{% block javascript %}
-		{% endblock %}
-		{% block globalsearchjavascript %}	
-		{% endblock %}		
+	<p>Tel: 222-333-444</p>
+	<p>Email: courses@ukr.net</p>
+
+	{% block globalsearch %}
+	{% endblock %}
+
+            {% endblock %}								
+        </header>
+        <nav class="mainnav">
+            {% block nav %}
+            {% endblock %}	
+        </nav>
+        <main class="mainmain clearfix">
+
+            {% block sectionMenu %}
+            {% endblock %}
+
+            {% block main %}
+	<aside class="mainaside clearfix">
+                        {% block sidebar %}				
+                        {% endblock %}
+	</aside>
+	<section class="mainsection clearfix">
+                        {% block section %}
+                        {% endblock %}
+	</section>					
+            {% endblock %}
+        </main>
+        <footer>
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </div>
+
+    {% block javascript %}
+    {% endblock %}
+
+    {% block globalsearchjavascript %}	
+    {% endblock %}
+		
   </body>
 </html>
